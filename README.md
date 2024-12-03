@@ -1,12 +1,18 @@
 # Super-Resolution
 CSCI 635 - Group 4
 
+# Datasets:
+DIV2K: https://data.vision.ee.ethz.ch/cvl/DIV2K/
+BSD300: https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/
+Selfie2Anime*: https://www.kaggle.com/datasets/arnaud58/selfie2anime
+For Selfie2Anime we just use the anime faces disregarding the human faces
+
 # Training:
 Edit the path of training data and testing data folders in "data.py.
 Optional: Edit the path where you want to store the models
 Run main.py
 
-Pre-traained models:
+# Pre-traained models:
 You can access the pre-trained models from this drive link: https://drive.google.com/drive/folders/1fRZq8g9IX6ltdn892OBZY3Le6MOu3SuL?usp=sharing
 
 # Testing/Super resolving an image: 
