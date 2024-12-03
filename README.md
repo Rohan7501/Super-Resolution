@@ -1,10 +1,10 @@
-# Super-Resolution
+  # Super-Resolution
 CSCI 635 - Group 4
 
 # Datasets:
-DIV2K: https://data.vision.ee.ethz.ch/cvl/DIV2K/
-BSD300: https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/
-Selfie2Anime*: https://www.kaggle.com/datasets/arnaud58/selfie2anime
+  DIV2K: https://data.vision.ee.ethz.ch/cvl/DIV2K/
+  BSD300: https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/
+  Selfie2Anime*: https://www.kaggle.com/datasets/arnaud58/selfie2anime
 For Selfie2Anime we just use the anime faces disregarding the human faces
 
 # Training:
