@@ -3,7 +3,11 @@ CSCI 635 - Group 4
 
 # Training:
 Edit the path of training data and testing data folders in "data.py.
+Optional: Edit the path where you want to store the models
 Run main.py
+
+Pre-traained models:
+You can access the pre-trained models from this drive link: https://drive.google.com/drive/folders/1fRZq8g9IX6ltdn892OBZY3Le6MOu3SuL?usp=sharing
 
 # Testing/Super resolving an image: 
 Run super_resolve.py with following arguments -  
