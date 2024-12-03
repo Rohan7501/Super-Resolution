@@ -24,4 +24,4 @@ Run super_resolve.py with following arguments -
 
 Example command: python3 super_resolve.py --input_image "Input_Images/1.jpeg" --model "Trained_model/model_epoch_27.pth" --output_filename "Output_Images/output.jpg" --cuda 
 
-<br />Remove --cuda, if you dont have gpu or in other cases, to run on cpu. 
+Remove --cuda, if you dont have gpu or in other cases, to run on cpu. 
