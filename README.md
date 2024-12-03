@@ -2,9 +2,9 @@
 CSCI 635 - Group 4
 
 # Datasets:
-  1.DIV2K: https://data.vision.ee.ethz.ch/cvl/DIV2K/
-  2.BSD300: https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/
-  3.Selfie2Anime*: https://www.kaggle.com/datasets/arnaud58/selfie2anime
+  1. DIV2K: https://data.vision.ee.ethz.ch/cvl/DIV2K/
+  2. BSD300: https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/
+  3. Selfie2Anime*: https://www.kaggle.com/datasets/arnaud58/selfie2anime
   *For Selfie2Anime we just use the anime faces disregarding the human faces
 
 # Training:
