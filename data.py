@@ -31,8 +31,8 @@ def target_transform(crop_size):
 
 
 def get_training_set(upscale_factor):
-    # train_dir = "/home/rohan/RIT/Summer Sem 2238/CSCI - 631 CV/Project/Code/DIV2K_train_HR"
-    train_dir = "/home/rohan/RIT/Summer Sem 2238/CSCI - 631 CV/Project/Code/Combined_dataset_train"
+    # train_dir = "combined_dataset/train"
+    train_dir = "div2k_data/train"
     crop_size = calculate_valid_crop_size(128, upscale_factor)
     # crop_size = calculate_valid_crop_size(256, upscale_factor)
 
@@ -42,8 +42,8 @@ def get_training_set(upscale_factor):
 
 
 def get_test_set(upscale_factor):
-    # test_dir = "/home/rohan/RIT/Summer Sem 2238/CSCI - 631 CV/Project/Code/DIV2K_valid_HR"
-    test_dir = "/home/rohan/RIT/Summer Sem 2238/CSCI - 631 CV/Project/Code/Combined_dataset_test"
+    # test_dir = "combined_dataset/test"
+    test_dir = "div2k_data/test"
     crop_size = calculate_valid_crop_size(128, upscale_factor)
     # crop_size = calculate_valid_crop_size(256, upscale_factor)
 

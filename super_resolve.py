@@ -5,8 +5,10 @@ from PIL import Image
 import torch.nn.functional as F
 from math import log10
 from torchvision.transforms import ToTensor, ToPILImage
-from main import Net, ResidualBlock, EDSR_B, EDSR_F, EDSR_PS, EDSR_scaling_factor, EDSR_scale
+from main import Net, ResidualBlock, EDSR_B, EDSR_F, EDSR_PS, EDSR_scaling_factor, EDSR_scale, SEBlock, SpatialAttention
 from time import time
+
+from torchvision.models import vgg19
     
 import numpy as np
 
@@ -29,6 +31,9 @@ print(f"Input image size: {img.size}, mode: {img.mode}")
 img_to_tensor = ToTensor()
 input_tensor = img_to_tensor(img).unsqueeze(0)
 print(f"Input tensor size: {input_tensor.size()}")
+
+print(f"CUDA available: {torch.cuda.is_available()}")
+
 
 # Determine the device to use
 device = torch.device('cuda' if opt.cuda and torch.cuda.is_available() else 'cpu')

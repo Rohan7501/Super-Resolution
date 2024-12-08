@@ -1,0 +1,82 @@
+===> Epoch 3 Complete: Avg. Loss: 
+Time for required epoch 3: 9.343264456590016 minutes
+===> Avg. PSNR: 28.7411 dB
+Checkpoint saved to models_iter/model_epoch_3.pth
+
+===> Epoch 6 Complete: Avg. Loss: 0.0154
+Time for required epoch 6: 10.484218585491181 minutes
+===> Avg. PSNR: 29.6202 dB
+Checkpoint saved to models_iter/model_epoch_6.pth
+
+===> Epoch 7 Complete: Avg. Loss: 0.0148
+Time for required epoch 7: 9.408836682637533 minutes
+===> Avg. PSNR: 29.7319 dB
+Checkpoint saved to models_iter/model_epoch_7.pth
+
+===> Epoch 8 Complete: Avg. Loss: 0.0143
+Time for required epoch 8: 9.214969464143117 minutes
+===> Avg. PSNR: 29.8007 dB
+
+===> Epoch 9 Complete: Avg. Loss: 0.0139
+Time for required epoch 9: 9.046555789311727 minutes
+===> Avg. PSNR: 29.9713 dB
+Checkpoint saved to models_iter/model_epoch_9.pth
+
+===> Epoch 10 Complete: Avg. Loss: 0.0135
+Time for required epoch 10: 9.018175395329793 minutes
+===> Avg. PSNR: 30.1042 dB
+Checkpoint saved to models_iter/model_epoch_10.pth
+
+
+=============================================================
+
+
+===> Epoch 1 Complete: Avg. Loss: 0.0341
+Time for required epoch 1: 10.415900679429372 minutes
+===> Avg. PSNR: 27.9249 dB
+Checkpoint saved to models_iter/attn_percep_loss/model_epoch_1.pth
+
+===> Epoch 2 Complete: Avg. Loss: 0.0195
+Time for required epoch 2: 10.394707226753235 minutes
+===> Avg. PSNR: 28.8537 dB
+Checkpoint saved to models_iter/attn_percep_loss/model_epoch_2.pth
+
+===> Epoch 3 Complete: Avg. Loss: 0.0171
+Time for required epoch 3: 10.251038241386414 minutes
+===> Avg. PSNR: 29.2878 dB
+Checkpoint saved to models_iter/attn_percep_loss/model_epoch_3.pth
+
+===> Epoch 4 Complete: Avg. Loss: 0.0159
+Time for required epoch 4: 13.738160959879558 minutes
+===> Avg. PSNR: 29.6034 dB
+Checkpoint saved to models_iter/attn_percep_loss/model_epoch_4.pth
+
+===> Epoch 5 Complete: Avg. Loss: 0.0149
+Time for required epoch 5: 15.543264456590016 minutes
+===> Avg. PSNR: 29.7183 dB
+Checkpoint saved to models_iter/attn_percep_loss/model_epoch_5.pth
+
+===> Epoch 6 Complete: Avg. Loss: 0.0142
+Time for required epoch 6: 21.513340004285176 minutes
+===> Avg. PSNR: 29.9833 dB
+Checkpoint saved to models_iter/attn_percep_loss/model_epoch_6.pth
+
+===> Epoch 7 Complete: Avg. Loss: 0.0137
+Time for required epoch 7: 17.463744246959685 minutes
+===> Avg. PSNR: 30.1343 dB
+Checkpoint saved to models_iter/attn_percep_loss/model_epoch_7.pth
+
+===> Epoch 8 Complete: Avg. Loss: 0.0131
+Time for required epoch 8: 18.00934626261393 minutes
+===> Avg. PSNR: 30.3186 dB
+Checkpoint saved to models_iter/attn_percep_loss/model_epoch_8.pth
+
+===> Epoch 9 Complete: Avg. Loss: 0.0127
+Time for required epoch 9: 9.667826382319133 minutes
+===> Avg. PSNR: 30.4289 dB
+Checkpoint saved to models_iter/attn_percep_loss/model_epoch_9.pth
+
+===> Epoch 10 Complete: Avg. Loss: 0.0126
+Time for required epoch 10: 8.917081395785013 minutes
+===> Avg. PSNR: 30.5184 dB
+Checkpoint saved to models_iter/attn_percep_loss/model_epoch_10.pth
