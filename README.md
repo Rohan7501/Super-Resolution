@@ -13,7 +13,7 @@ Edit the path of training data and testing data folders in "data.py.
 <br />Run main.py
 
 # Pre-trained models:
-You can access the pre-trained models from this drive link: https://drive.google.com/drive/folders/1fRZq8g9IX6ltdn892OBZY3Le6MOu3SuL?usp=sharing
+You can access the pre-trained models from this drive link: https://drive.google.com/file/d/1SmooTmN98UDHFd2iUgx9-37iCuCIL8D0/view?usp=drive_link
 
 # Testing/Super resolving an image: 
 Run super_resolve.py with following arguments -  
