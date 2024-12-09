@@ -31,7 +31,7 @@ Example command: python3 super_resolve.py --input_image "Input_Images/1.jpeg" --
 
 Remove --cuda, if you dont have gpu or in other cases, to run on cpu. 
 
-# Converting the model to TensrRT engine 
+# Converting the model to TensorRT engine 
   Run torch_to_engine.py with following arguments:
   1. model location
   2. output filename(without any extension, the file will be created as "output filename.engine")
