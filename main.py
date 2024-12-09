@@ -21,18 +21,6 @@ threads = 4
 batchSize = 5
 testBatchSize = 10
 
-# Depthwise Separable Convolution Layer
-class DepthwiseSeparableConv(nn.Module):
-    def __init__(self, in_channels, out_channels, kernel_size, stride=1, padding=0):
-        super(DepthwiseSeparableConv, self).__init__()
-        self.depthwise = nn.Conv2d(in_channels, in_channels, kernel_size, stride, padding, groups=in_channels, bias=False)
-        self.pointwise = nn.Conv2d(in_channels, out_channels, kernel_size=1, bias=False)
-
-    def forward(self, x):
-        x = self.depthwise(x)
-        x = self.pointwise(x)
-        return x
-
 class SEBlock(nn.Module):
     def __init__(self, channels, reduction=16):
         super(SEBlock, self).__init__()
@@ -71,11 +59,9 @@ class SpatialAttention(nn.Module):
 class ResidualBlock(nn.Module):
     def __init__(self):
         super(ResidualBlock, self).__init__()
-        # self.conv1 = nn.Conv2d(EDSR_F, EDSR_F, kernel_size=3, padding=1)
-        self.conv1 = DepthwiseSeparableConv(EDSR_F, EDSR_F, 3, padding=1)
+        self.conv1 = nn.Conv2d(EDSR_F, EDSR_F, kernel_size=3, padding=1)
         self.relu = nn.ReLU()
-        # self.conv2 = nn.Conv2d(EDSR_F, EDSR_F, kernel_size=3, padding=1)
-        self.conv2 = DepthwiseSeparableConv(EDSR_F, EDSR_F, 3, padding=1)
+        self.conv2 = nn.Conv2d(EDSR_F, EDSR_F, kernel_size=3, padding=1)
         self.se_block = SEBlock(EDSR_F)  # Channel attention
         self.spatial_attention = SpatialAttention()  # Spatial attention
 
@@ -100,13 +86,10 @@ class ResidualBlock(nn.Module):
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
-        # self.conv1 = nn.Conv2d(3, EDSR_F, 3, padding=1)
-        self.conv1 = DepthwiseSeparableConv(3, EDSR_F, 3, padding=1)
+        self.conv1 = nn.Conv2d(3, EDSR_F, 3, padding=1)
         self.res_blocks = nn.Sequential(*[ResidualBlock() for _ in range(EDSR_B)])
-        # self.conv2 = nn.Conv2d(EDSR_F, EDSR_F, 3, padding=1)
-        # self.conv3 = nn.Conv2d(EDSR_F, EDSR_PS, 3, padding=1)
-        self.conv2 = DepthwiseSeparableConv(EDSR_F, EDSR_F, 3, padding=1)
-        self.conv3 = DepthwiseSeparableConv(EDSR_F, EDSR_PS, 3, padding=1)
+        self.conv2 = nn.Conv2d(EDSR_F, EDSR_F, 3, padding=1)
+        self.conv3 = nn.Conv2d(EDSR_F, EDSR_PS, 3, padding=1)
         self.pixel_shuffle = nn.PixelShuffle(EDSR_scale)
 
     def forward(self, x):
