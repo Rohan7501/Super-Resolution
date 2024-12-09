@@ -1,14 +1,23 @@
 import torch
 import tensorrt as trt
 import numpy as np
+import argparse
 from torch.autograd import Variable
 from main import Net, ResidualBlock, EDSR_B, EDSR_F, EDSR_PS, EDSR_scaling_factor, EDSR_scale, SpatialAttention,SEBlock
 
+parser = argparse.ArgumentParser(description='Convert pytoch model TensorRT Engine')
+parser.add_argument('--model', type=str, required=True, help='model file to use')
+parser.add_argument('--output_filename', type=str,required=True, help='where to save the output image')
+parser.add_argument('--input_height', type=int,required=True, help='input image height')
+parser.add_argument('--input_width', type=int,required=True, help='input image width')
+
+opt = parser.parse_args()
+
 # Paths
 # pytorch_model_path = "models/model_epoch_27.pth"  # Path to the PyTorch model
-pytorch_model_path = "model_prajwal/model_epoch_10.pth"  # Path to the PyTorch model
-onnx_model_path = "model_p2.onnx"  # Path to save ONNX model
-engine_output_path = "model_p2.engine"  # Path to save TensorRT engine
+pytorch_model_path = opt.model# Path to the PyTorch model
+onnx_model_path = opt.output_filename + ".onnx" # Path to save ONNX model
+engine_output_path = opt.output_filename + ".engine"  # Path to save TensorRT engine
 
 # 1. Load PyTorch Model
 print("Loading PyTorch model...")
@@ -18,7 +27,7 @@ model.eval()
 
 # 2. Export Model to ONNX
 print("Exporting PyTorch model to ONNX...")
-dummy_input = torch.randn(1, 3, 256, 256, device=device)  # Adjust input shape as per your model
+dummy_input = torch.randn(1, 3, opt.input_height, opt.input_width, device=device)  # Adjust input shape as per your model
 torch.onnx.export(
     model,
     dummy_input,

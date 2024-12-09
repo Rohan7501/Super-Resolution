@@ -6,6 +6,13 @@ from PIL import Image
 from torchvision.transforms import ToTensor, ToPILImage
 import torch
 from time import time
+import argparse
+
+parser = argparse.ArgumentParser(description='Convert pytoch model TensorRT Engine')
+parser.add_argument('--engine', type=str, required=True, help='engine file to use')
+parser.add_argument('--output_filename', type=str,required=True, help='where to save the output image')
+parser.add_argument('--input_image', type=str,required=True, help='image for super resolution')
+opt = parser.parse_args()
 
 # Load the TensorRT engine
 def load_engine(trt_logger, engine_path):
@@ -79,14 +86,14 @@ def infer(engine, input_tensor):
 
 def main():
     # Set the path to your TensorRT engine file
-    engine_path = 'model2.engine'
+    engine_path = opt.engine
 
     # Load the TensorRT engine
     trt_logger = trt.Logger(trt.Logger.WARNING)
     engine = load_engine(trt_logger, engine_path)
 
     # Load and preprocess the input image
-    input_image = 'Input_Images/8.jpg'
+    input_image = opt.input_image
     img = Image.open(input_image).convert('RGB')
     img_to_tensor = ToTensor()
     input_tensor = img_to_tensor(img).unsqueeze(0)
@@ -99,7 +106,7 @@ def main():
     output_tensor = torch.from_numpy(output_data)
     output_tensor = output_tensor.squeeze(0).clamp(0, 1)
     output_img = ToPILImage()(output_tensor)
-    output_img.save('Output_Images/test8.png')
+    output_img.save(opt.output_filename)
 
     print("Inference completed and output image saved.")
 
