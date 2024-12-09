@@ -18,7 +18,7 @@ Edit the path of training data and testing data folders in "data.py".
 <br />Run main.py
 
 # Pre-trained models:
-You can access the pre-trained models from this drive link: https://drive.google.com/file/d/1SmooTmN98UDHFd2iUgx9-37iCuCIL8D0/view?usp=drive_link
+You can access the pre-trained models from this drive link: https://drive.google.com/drive/folders/19WSmRBpaKdZd2yDP8t7_dfwK1ht0UYis?usp=sharing
 
 # Testing/Super resolving an image: 
 Run super_resolve.py with following arguments -  
@@ -43,6 +43,7 @@ Example command: python3 torch_to_engine.py --model model.pth --output_filename 
 <br />One of the contraints for speeding up the model is we fix the input size for the image.
 <br />With our limitation of 8GB vRAM we were able to produce an engine that takes input image of resolution 128x128.
 <br />However this constraint doesnt apply for the pytorch model which can handle a 1280x720 image for a 8GB vRam GPU.
+<br />The engine file for the pretrained model for 128x128 input size is also available on the above drive link
 
 # Running the engine
 Run run_engine.py with following arguments:
